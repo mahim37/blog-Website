@@ -18,8 +18,8 @@ app.use(express.static("public"));
 
 app.locals._ = _;
 
-// mongoose.connect('mongodb+srv://light:mahimg@cluster0.xl6a65u.mongodb.net/newsLetterDB');
-mongoose.connect('mongodb://127.0.0.1:27017/newsLetterDB');
+mongoose.connect('mongodb+srv://light:mahimg@cluster0.xl6a65u.mongodb.net/newsLetterDB');
+// mongoose.connect('mongodb://127.0.0.1:27017/newsLetterDB');
 
 
 const postSchema = new mongoose.Schema({
