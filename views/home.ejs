@@ -1,0 +1,25 @@
+<%- include('partials/header'); %>
+<h1>Home</h1>
+<p>
+    <h4><%= homeStartingContent %></h4>
+    
+</p>
+<p>
+    <% posts.forEach(function(post){ %>
+        <p>
+           <h3><%= (post.postName) %></h3>
+        </p>
+        <% if(post.postContent.length > 100){ %>
+            <p><%= _.truncate(post.postContent,{'length': 100, 'omission': '...'}) %> 
+                <a href="/posts/<%= post.postContent %>" >Read more</a>
+            </p> 
+        <% } else{ %>
+            <p>
+                <%= post.postContent %>
+            </p>
+        <% } %>
+        
+    <% }); %>
+
+</p>
+<%- include('partials/footer'); %>
